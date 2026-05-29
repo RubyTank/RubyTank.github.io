@@ -3,23 +3,10 @@
 <body>
 <h1>Monarch</h1>
 
-<button onclick="testBackend()">Test PHP Backend</button>
-<p id="result"></p>
-
-<script>
-    function testBackend() {
-        fetch("https://mustafaapi.free.nf/dbtest.php", {
-            method: "GET",
-            mode: "cors"
-        })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("result").innerText = data;
-            })
-            .catch(error => {
-                document.getElementById("result").innerText = "Error: " + error;
-            });
-    }
-</script>
+<a href="https://mustafaapi.free.nf/register.php">Register</a>
+<br>
+<a href="https://mustafaapi.free.nf/login.php">Login</a>
+<br>
+<a href="https://mustafaapi.free.nf/dashboard.php">Dashboard</a>
 </body>
 </html>
