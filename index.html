@@ -1,0 +1,9 @@
+<button onclick="test()">Test PHP</button>
+
+<script>
+function test() {
+    fetch("https://api.mustafaansari.me/test.php")
+      .then(r => r.text())
+      .then(alert);
+}
+</script>
