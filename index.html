@@ -1,9 +1,22 @@
-<button onclick="test()">Test PHP</button>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Monarch</h1>
+
+<button onclick="testBackend()">Test PHP Backend</button>
+<p id="result"></p>
 
 <script>
-function test() {
-    fetch("https://api.mustafaansari.me/test.php")
-      .then(r => r.text())
-      .then(alert);
-}
+    function testBackend() {
+        fetch("https://mustafaapi.free.nf/dbtest.php")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("result").innerText = data;
+            })
+            .catch(error => {
+                document.getElementById("result").innerText = "Error: " + error;
+            });
+    }
 </script>
+</body>
+</html>
